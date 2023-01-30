@@ -1,0 +1,23 @@
+# COMPILE ISTRUCTIONS:
+
+# Clean the code and remove old binaries/compilation artefact 
+# ./fbt -c Lora_Communicator
+
+# Compile FAP
+# ./fbt Lora_Communicator
+
+# Run application directly inside the Flip.x0
+# ./fbt launch_app APPSRC=Lora_Communicator
+
+App(
+    # Foldername of the application
+    appid="FAP-Template",
+    # name will be show on the Flip.x0 browser
+    name="FAP-Template",
+    apptype=FlipperAppType.EXTERNAL,
+    # Main function (entry point) of the application  
+    entry_point="main",
+    stack_size=1 * 1024,
+    # Where the application will be stored into the Flip.x0
+    fap_category="GPIO",
+)
